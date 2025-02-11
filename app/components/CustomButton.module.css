@@ -1,0 +1,13 @@
+.btn {
+  border: 2px solid #94c7e9;
+  background-color: #5fa3d1;
+  color: #10354e;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #82afce;
+}
