@@ -1,0 +1,38 @@
+.body {
+  background-image: url("./images/about-light-theme.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  width: 98.5%;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.text-container-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-box-about {
+  text-align: center;
+  background: rgba(170, 74, 0, 0.516);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+

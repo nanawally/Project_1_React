@@ -1,10 +1,41 @@
 import { Link } from "react-router";
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+import "./welcome.css";
+/*import logoDark from "./logo-dark.svg";
+import logoLight from "./images/logo-light.svg";*/
 import { CustomButton } from "~/components/CustomButton";
 
 export function Welcome() {
   return (
+    <>
+      <body>
+        <header>
+          <nav className="text-container">
+            <button>
+              <Link to="/">Home</Link>
+            </button>
+            <button>
+              <Link to="/about">About</Link>
+            </button>
+          </nav>
+        </header>
+        <main>
+          <section className="text-container">
+            <h1 className="text-box">Home page</h1>
+          </section>
+          <section className="text-container">
+            <p className="text-box">
+              This is a page that is part of the examination process for the
+              course "Frontend och Ramverk".
+            </p>
+          </section>
+          <section className="text-container">
+            <CustomButton customButtonName={"example"} />
+          </section>
+        </main>
+      </body>
+    </>
+
+    /*
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <header className="flex flex-col items-center gap-9">
@@ -48,6 +79,7 @@ export function Welcome() {
         </div>
       </div>
     </main>
+    */
   );
 }
 
