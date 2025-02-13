@@ -3,6 +3,10 @@ import "./about.css";
 import { useState } from "react";
 import type { User } from "~/types/User";
 
+function introduction(): string {
+  return "This is a page that is part of the examination process for the course Frontend och Ramverk.";
+}
+
 export function About() {
   const [score, setScore] = useState<number>(0);
   function addToScore(chosenNumber: number) {
@@ -38,10 +42,7 @@ export function About() {
             <h1 className="text-box-about">About page</h1>
           </section>
           <section className="text-container-about">
-            <p className="text-box-about">
-              This is a page that is part of the examination process for the
-              course "Frontend och Ramverk".
-            </p>
+            <p className="text-box-about">{introduction()}</p>
           </section>
           <section className="text-container-about">
             <p className="text-box-about">My name is... {user.username}</p>
