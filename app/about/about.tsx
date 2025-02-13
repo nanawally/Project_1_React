@@ -1,18 +1,17 @@
 import { Link } from "react-router";
 import "./about.css";
 import { useState } from "react";
+import type { User } from "~/types/User";
 
 export function About() {
-  // const [getter, setter] = useState<dataType>(initialValue) // useState Hook
   const [score, setScore] = useState<number>(0);
-  /*
-  const [username, setUsername] = useState<string>("");
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [user, setUser] = useState<User>({username: "", password: ""})
-  */
-
   function addToScore(chosenNumber: number) {
     setScore((prev) => prev + chosenNumber);
+  }
+
+  const [user, setUser] = useState<User>({ username: "", password: "" });
+  function updateUser(newName: string) {
+    setUser((prevUser) => ({ ...prevUser, username: newName }));
   }
 
   const [aboutTheme, setTheme] = useState("aboutlight");
@@ -41,8 +40,27 @@ export function About() {
           <section className="text-container-about">
             <p className="text-box-about">
               This is a page that is part of the examination process for the
-              course "Frontend och Ramverk"
+              course "Frontend och Ramverk".
             </p>
+          </section>
+          <section className="text-container-about">
+            <p className="text-box-about">My name is... {user.username}</p>
+          </section>
+          <section className="text-container-about">
+            <button
+              onClick={() => {
+                updateUser("Maddie");
+              }}
+            >
+              Maddie
+            </button>
+            <button
+              onClick={() => {
+                updateUser("Benjamin");
+              }}
+            >
+              Benjamin
+            </button>
           </section>
           <section className="text-container-about">
             <p className="text-box-about">Score: {score}</p>
