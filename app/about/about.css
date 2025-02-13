@@ -1,5 +1,30 @@
-.body {
+/*.body {
   background-image: url("./images/about-light-theme.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  width: 98.5%;
+}
+*/
+
+.aboutlight {
+  background-image: url("./images/about-light-theme.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  width: 98.5%;
+}
+
+.aboutdark {
+  background-image: url("./images/about-dark-theme.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -28,7 +53,7 @@ h1 {
 
 .text-box-about {
   text-align: center;
-  background: rgba(170, 74, 0, 0.516);
+  background: rgba(202, 92, 7, 0.781);
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
@@ -36,3 +61,13 @@ h1 {
   width: auto;
 }
 
+.button-change-theme-about {
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  margin: 2%;
+  background-color: rgba(137, 43, 226, 0.311);
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+}

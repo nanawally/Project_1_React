@@ -1,4 +1,4 @@
-body {
+/*body {
   background-image: url("./images/home-light-theme.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9,6 +9,32 @@ body {
   margin: 0;
   width: 98.5%;
 }
+*/
+
+.welcomelight {
+  background-image: url("./images/home-light-theme.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  width: 98.5%;
+}
+
+.welcomedark {
+  background-image: url("./images/home-dark-theme.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  width: 98.5%;
+}
+
 
 main {
   flex: 1;
@@ -28,10 +54,19 @@ h1 {
 
 .text-box {
   text-align: center;
-  background: rgba(49, 142, 255, 0.021);
+  background: rgba(49, 142, 255, 0.326);
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: auto;
+}
+
+.button-change-theme {
+  font-size: large;
+  margin: 2%;
+  background-color: rgba(137, 43, 226, 0.311);
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
 }
