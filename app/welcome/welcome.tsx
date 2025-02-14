@@ -1,6 +1,8 @@
-import { Link } from "react-router";
 import "./welcome.css";
-import { CustomNavButton } from "~/components/CustomButton";
+import {
+  CustomFunctionButton,
+  CustomNavButton,
+} from "~/components/CustomButton";
 import { useState } from "react";
 
 export function Welcome() {
@@ -29,9 +31,12 @@ export function Welcome() {
             </p>
           </section>
           <section className="text-container">
-            <button className="button-change-theme" onClick={changeTheme}>
-              Change theme
-            </button>
+            <CustomFunctionButton
+              customButtonName={"Change Theme"}
+              customOnClickFunction={() => {
+                changeTheme();
+              }}
+            />
           </section>
         </main>
       </body>

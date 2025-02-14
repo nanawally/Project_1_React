@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import "./about.css";
 import { useState } from "react";
 import type { User } from "~/types/User";
@@ -32,7 +31,7 @@ export function About() {
     <>
       <body className={aboutTheme}>
         <header>
-          <nav className="text-container">
+          <nav className="text-container-about">
             <CustomNavButton customButtonName={"Home"} navigateTo={"/"} />
             <CustomNavButton customButtonName={"About"} navigateTo={"/about"} />
           </nav>
@@ -79,9 +78,12 @@ export function About() {
             />
           </section>
           <section className="text-container-about">
-            <button className="button-change-theme-about" onClick={changeTheme}>
-              Change theme
-            </button>
+            <CustomFunctionButton
+              customButtonName={"Change Theme"}
+              customOnClickFunction={() => {
+                changeTheme();
+              }}
+            />
           </section>
         </main>
       </body>

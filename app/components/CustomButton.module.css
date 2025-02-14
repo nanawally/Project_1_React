@@ -1,14 +1,14 @@
 .btn {
-  border: 2px solid #94c7e9;
-  background-color: #5fa3d1;
-  color: #000000;
+  font-size: large;
   font-family: 'Courier New', Courier, monospace;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+  font-weight: bolder;
   margin: 20px;
+  background-color: rgba(137, 43, 226, 0.411);
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .btn:hover {
-  background-color: #82afce;
+  background-color: #bea4fb;
 }
