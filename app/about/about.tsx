@@ -2,6 +2,10 @@ import { Link } from "react-router";
 import "./about.css";
 import { useState } from "react";
 import type { User } from "~/types/User";
+import {
+  CustomFunctionButton,
+  CustomNavButton,
+} from "~/components/CustomButton";
 
 function introduction(): string {
   return "This is a page that is part of the examination process for the course Frontend och Ramverk.";
@@ -28,13 +32,9 @@ export function About() {
     <>
       <body className={aboutTheme}>
         <header>
-          <nav className="text-container-about">
-            <button>
-              <Link to="/">Home</Link>
-            </button>
-            <button>
-              <Link to="/about">About</Link>
-            </button>
+          <nav className="text-container">
+            <CustomNavButton customButtonName={"Home"} navigateTo={"/"} />
+            <CustomNavButton customButtonName={"About"} navigateTo={"/about"} />
           </nav>
         </header>
         <main>
@@ -48,39 +48,35 @@ export function About() {
             <p className="text-box-about">My name is... {user.username}</p>
           </section>
           <section className="text-container-about">
-            <button
-              onClick={() => {
+            <CustomFunctionButton
+              customButtonName={"Maddie"}
+              customOnClickFunction={() => {
                 updateUser("Maddie");
               }}
-            >
-              Maddie
-            </button>
-            <button
-              onClick={() => {
+            />
+            <CustomFunctionButton
+              customButtonName={"Benjamin"}
+              customOnClickFunction={() => {
                 updateUser("Benjamin");
               }}
-            >
-              Benjamin
-            </button>
+            />
           </section>
           <section className="text-container-about">
             <p className="text-box-about">Score: {score}</p>
           </section>
           <section className="text-container-about">
-            <button
-              onClick={() => {
+            <CustomFunctionButton
+              customButtonName={"Score + 1"}
+              customOnClickFunction={() => {
                 addToScore(1);
               }}
-            >
-              Score + 1
-            </button>
-            <button
-              onClick={() => {
+            />
+            <CustomFunctionButton
+              customButtonName={"Score + 2"}
+              customOnClickFunction={() => {
                 addToScore(2);
               }}
-            >
-              Score + 2
-            </button>
+            />
           </section>
           <section className="text-container-about">
             <button className="button-change-theme-about" onClick={changeTheme}>

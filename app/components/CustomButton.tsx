@@ -1,15 +1,31 @@
-import styles from "./CustomButton.module.css"
+import { Link } from "react-router";
+import styles from "./CustomButton.module.css";
 
-interface CustomButton{
-    customButtonName: string
+interface CustomFunctionButton {
+  customButtonName: string;
+  customOnClickFunction: () => void;
+}
+
+interface CustomNavButton {
+  customButtonName: string;
+  navigateTo: string;
 }
 
 // className === class
 // id === id (remains the same)
-export function CustomButton(props: CustomButton) {
+
+export function CustomFunctionButton(props: CustomFunctionButton) {
   return (
-    <div>
+    <button className={styles.btn} onClick={props.customOnClickFunction}>
+      {props.customButtonName}
+    </button>
+  );
+}
+
+export function CustomNavButton(props: CustomNavButton) {
+  return (
+    <Link to={props.navigateTo}>
       <button className={styles.btn}>{props.customButtonName}</button>
-    </div>
+    </Link>
   );
 }

@@ -64,6 +64,8 @@ h1 {
 
 .button-change-theme {
   font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
   margin: 2%;
   background-color: rgba(137, 43, 226, 0.311);
   color: black;
